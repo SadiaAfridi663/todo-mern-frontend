@@ -19,6 +19,7 @@ const Login = () => {
 
     try {
       const res = await API.post("/user/login", { email, password });
+      console.log(res);
       if (res.data.isSuccess) {
         // Update user in context
         setUser(res.data.user);
